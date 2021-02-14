@@ -19,6 +19,20 @@
                 <td>[[${#numbers.formatInteger(b.price,3,'COMMA')}]]円</td>
                 <td>[[${b.publisher}]]</td>
                 <td>[[${#temporals.format(b.published,'yyyy年MM月dd日')}]]</td>
+                <td th:switch="${b.attach}">
+                    <span th:case="'cd'">
+                        <img th:src="@{/image/cd.png}" th:alt-title="${b.attach}">
+                    </span>
+                    <span th:case="'dvd'">
+                        <img th:src="@{/image/dvd.png}" th:alt-title="${b.attach}">
+                    </span>
+                    <span th:case="'dl'">
+                        <img th:src="@{/image/dl.png}" th:alt-title="${b.attach}">
+                    </span>
+                    <span th:case="*">
+                        -
+                    </span>
+                </td>
             </tr>
         </tbody>
     </table>
