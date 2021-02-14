@@ -9,7 +9,7 @@ public class ViewController {
 
 	@GetMapping("/view/master")
 	public String master(Model model) {
-		model.addAttribute("title","‹¤’ÊƒŒƒCƒAƒEƒg");
+		model.addAttribute("title","å…±é€šãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆ");
 		model.addAttribute("lib","view/master::lib");
 		model.addAttribute("main","view/master::main");
 		
